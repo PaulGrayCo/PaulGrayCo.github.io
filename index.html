@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ninefour. films - Authentic Storytelling Through Creative Lens</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ninefour films specializes in producing meaningful documentaries and helping businesses with their video needs. Authentic storytelling through our creative lens.">
+    <meta name="keywords" content="documentary films, video production, business videos, authentic storytelling, creative videography">
+    <meta name="author" content="ninefour films">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ninefour. films - Authentic Storytelling">
+    <meta property="og:description" content="Producing meaningful docu-films and helping businesses with their video needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ninefourfilms.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-color: #FCF6F5;
+            --accent-color: #2A2B2A;
+            --primary-color: #C55043;
+            --title-color: #C69A94;
+            --text-color: #2A2B2A;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 300;
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(252, 246, 245, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(42, 43, 42, 0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo img {
+            height: 65px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 400;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-top: 100px;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 65%;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(42, 43, 42, 0.6), rgba(197, 80, 67, 0.4)), 
+                        url('http://paulgray.co/wp-content/uploads/2025/03/Paul-Profile-Pic.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+        
+        .content-container {
+            display: grid;
+            grid-template-columns: 35% 65%;
+            gap: 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .left-content {
+            z-index: 2;
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background: rgba(252, 246, 245, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .hero-tagline {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.8;
+        }
+        
+        .brand-title {
+            margin-bottom: 3rem;
+        }
+        
+        .brand-title .line1 {
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--title-color);
+            line-height: 0.9;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 0.5rem;
+        }
+        
+        .brand-title .line2 {
+            font-size: 18px;
+            color: var(--accent-color);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            text-transform: capitalize;
+        }
+        
+        .focus-section {
+            margin-bottom: 3rem;
+            text-align: left;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .focus-heading {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .focus-list {
+            font-size: 16px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        .focus-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .focus-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .signup-text {
+            font-size: 16px;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        /* Form Styles */
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            position: relative;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1rem 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(42, 43, 42, 0.3);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: var(--primary-color);
+            border-bottom-width: 2px;
+        }
+        
+        .form-input::placeholder {
+            color: rgba(42, 43, 42, 0.5);
+            font-weight: 300;
+        }
+        
+        .signup-btn {
+            background: linear-gradient(135deg, var(--primary-color), #d4614f);
+            color: var(--white);
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(197, 80, 67, 0.3);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .signup-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .signup-btn:hover::before {
+            left: 100%;
+        }
+        
+        .signup-btn:hover {
+            background: linear-gradient(135deg, var(--accent-color), #1a1b1a);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(42, 43, 42, 0.4);
+        }
+        
+        .signup-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        /* Right Content - Video */
+        .right-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 3px solid rgba(255,255,255,0.1);
+        }
+        
+        .video-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-color), var(--title-color), var(--primary-color));
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .video-container:hover::before {
+            opacity: 1;
+        }
+        
+        .video-container:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+        
+        .video-container iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+        }
+        
+        /* Video Play Button Overlay */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+        
+        .play-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+        
+        .video-container:hover .play-icon {
+            transform: scale(1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .content-container {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .left-content {
+                text-align: center;
+                padding: 3rem 2rem;
+                min-height: 60vh;
+            }
+            
+            .brand-title .line1 {
+                font-size: 48px;
+            }
+            
+            .hero-background {
+                width: 100%;
+                height: 40vh;
+                background-attachment: scroll;
+                opacity: 0.3;
+            }
+            
+            .right-content {
+                min-height: 40vh;
+                background: linear-gradient(135deg, rgba(252, 246, 245, 0.95), rgba(198, 154, 148, 0.1));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(252, 246, 245, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                border-radius: 0 0 15px 15px;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .left-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .brand-title .line1 {
+                font-size: 36px;
+            }
+            
+            .hero-tagline {
+                font-size: 16px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+            
+            .video-container iframe {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .brand-title .line1 {
+                font-size: 28px;
+            }
+            
+            .left-content {
+                padding: 1.5rem 1rem;
+            }
+            
+            .video-container iframe {
+                height: 200px;
+            }
+            
+            .signup-form {
+                max-width: 100%;
+            }
+        }
+        
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.3s; }
+        .fade-in:nth-child(3) { animation-delay: 0.5s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(5px) rotate(-1deg); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Gradient Text Animation */
+        .gradient-text {
+            background: linear-gradient(-45deg, var(--primary-color), var(--title-color), var(--primary-color), var(--accent-color));
+            background-size: 400% 400%;
+            animation: gradientShift 4s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Particle Effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: floatUp 8s infinite linear;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(0deg);
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png" alt="ninefour films logo">
+            </div>
+            <nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="https://ninefourfilms.com/services/">Our Services</a></li>
+                    <li><a href="https://ninefourfilms.com/ourfilms/">Our Videos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="hero-background"></div>
+        
+        <div class="content-container">
+            <div class="left-content">
+                <div class="particles" id="particles"></div>
+                
+                <div class="hero-tagline fade-in">Telling Authentic Stories Through Our Creative Lens</div>
+                
+                <div class="brand-title fade-in">
+                    <div class="line1 gradient-text">ninefour.</div>
+                    <div class="line2">films</div>
+                </div>
+                
+                <div class="focus-section scroll-animate">
+                    <h3 class="focus-heading">WE FOCUS ON:</h3>
+                    <div class="focus-list">
+                        • producing meaningful docu-films (<a href="https://ninefourfilms.com/ourfilms/">see our work</a>)<br>
+                        • helping businesses with their video needs.
+                    </div>
+                    <p class="signup-text">Sign up below if you're looking for help with your videography needs:</p>
+                </div>
+                
+                <form class="signup-form scroll-animate" id="signupForm">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="firstName" name="firstName" placeholder="Enter Your First Name Here" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="email" name="email" placeholder="Enter Your Email Address Here" required>
+                    </div>
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                </form>
+            </div>
+            
+            <div class="right-content">
+                <div class="video-container scroll-animate floating">
+                    <div class="video-overlay">
+                        <div class="play-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 5v14l11-7z" fill="#C55043"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <iframe 
+                        width="560" 
+                        height="350" 
+                        src="https://www.youtube.com/embed/ueyI28rIoUk?si=SW2Bt8-mGrN73DGL" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div> 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Form Submission
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const email = document.getElementById('email').value;
+            
+            if (firstName && email) {
+                // Construct the URL with parameters
+                const baseUrl = 'https://paulgray.kit.com/471bef30b6/thanks';
+                const params = new URLSearchParams({
+                    'first_name': firstName,
+                    'email': email
+                });
+                
+                // Redirect to thank you page with parameters
+                window.location.href = `${baseUrl}?${params.toString()}`;
+            }
+        });
+
+        // Scroll Animations
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.scroll-animate');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Header Scroll Effect
+        function handleHeaderScroll() {
+            const header = document.querySelector('.header');
+            const scrollY = window.scrollY;
+            
+            if (scrollY > 50) {
+                header.style.background = 'rgba(252, 246, 245, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(252, 246, 245, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        }
+
+        // Event Listeners
+        window.addEventListener('scroll', () => {
+            handleScrollAnimations();
+            handleHeaderScroll();
+        });
+
+        window.addEventListener('load', () => {
+            handleScrollAnimations();
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Preload critical images
+        const preloadImages = [
+            'http://paulgray.co/wp-content/uploads/2025/03/Paul-Profile-Pic.png',
+            'https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png'
+        ];
+
+        preloadImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    </script>
+</body>
+</html>
