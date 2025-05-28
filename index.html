@@ -109,7 +109,7 @@
 
         .nav-container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 10px auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -121,6 +121,7 @@
         .logo {
             height: 65px;
             width: 150px;
+            margin-top: -20px;
             object-fit: contain;
             transition: var(--transition);
             filter: drop-shadow(0 2px 4px rgba(42, 43, 42, 0.1));
@@ -181,6 +182,7 @@
         .cta-button:focus {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(197, 80, 67, 0.4);
+            color: #ffffff;
         }
 
         /* Mobile menu */
@@ -254,9 +256,10 @@
             gap: 1.25rem;
             flex-wrap: wrap;
         }
+        
 
         .btn-secondary {
-            background: transparent;
+            background: fcf6f5;
             color: #2A2B2A;
             border: 2px solid #2A2B2A;
             padding: 0.875rem 2rem;
@@ -578,6 +581,26 @@
             font-size: 1.125rem;
             line-height: 1.7;
         }
+        
+        .form-button {
+            background: linear-gradient(135deg, #C55043 0%, #8B3A2A 100%);
+            color: #ffffff;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 16px rgba(197, 80, 67, 0.3);
+        }
+
+        .form-button:hover,
+        .form-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(197, 80, 67, 0.4);
+            color: #ffffff;
 
         /* Footer - Enhanced */
         footer {
@@ -749,9 +772,9 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#about" class="nav-link">Our Work</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#contact" class="cta-button">Get Quote</a></li>
+                <li><a href="#contact" class="cta-button">Work With Us</a></li>
             </ul>
             
             <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
@@ -794,72 +817,26 @@
                     <div class="service-card fade-in">
                         <div class="service-image">🎬</div>
                         <div class="service-content">
-                            <h3>Commercial Production</h3>
-                            <p>High-impact commercial videos that drive results. From concept development to final delivery, we create compelling advertisements that resonate with your target audience.</p>
+                            <h3>1.) Video Production</h3>
+                            <p>Planning & filming for your commercial needs, creating videos that drive results. From concept development to final delivery, we create compelling media that resonate with your target audience.</p>
                         </div>
                     </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-image">🏢</div>
-                        <div class="service-content">
-                            <h3>Corporate Videos</h3>
-                            <p>Professional corporate content including company profiles, training videos, and internal communications that effectively convey your brand message.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-image">🎥</div>
-                        <div class="service-content">
-                            <h3>Event Coverage</h3>
-                            <p>Comprehensive event documentation and live streaming services. Capture every important moment with cinematic quality and professional editing.</p>
-                        </div>
-                    </div>
-                    
+                   
                     <div class="service-card fade-in">
                         <div class="service-image">✂️</div>
                         <div class="service-content">
-                            <h3>Post-Production</h3>
-                            <p>Expert editing, color grading, sound design, and motion graphics. Transform raw footage into polished, professional content that exceeds expectations.</p>
+                            <h3>2.) Post-Production</h3>
+                            <p>Expert editing, color grading, sound design, and basic motion graphics. Transform raw footage into polished, professional content that exceeds expectations.</p>
                         </div>
                     </div>
                     
-                    <div class="service-card fade-in">
-                        <div class="service-image">📱</div>
-                        <div class="service-content">
-                            <h3>Social Media Content</h3>
-                            <p>Engaging short-form content optimized for social platforms. Increase your online presence with videos designed for maximum engagement and shareability.</p>
-                        </div>
-                    </div>
-                    
+                        
                     <div class="service-card fade-in">
                         <div class="service-image">🎭</div>
                         <div class="service-content">
-                            <h3>Creative Consulting</h3>
-                            <p>Strategic creative direction and storytelling expertise. We help develop concepts that align with your brand and effectively communicate your message.</p>
+                            <h3>3.) Creative & Marketing Consulting</h3>
+                            <p>Strategic creative direction and storytelling expertise. We help develop concepts that align with your brand and effectively communicate your message, bringing you results.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item fade-in">
-                        <h3>150+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <h3>50+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <h3>5+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <h3>24/7</h3>
-                        <p>Support Available</p>
                     </div>
                 </div>
             </div>
@@ -872,7 +849,7 @@
                         <h2>Crafting Stories That Matter</h2>
                         <p>At ninefour., we believe every brand has a unique story worth telling. With over five years of experience in video production, we specialize in creating visual narratives that connect with audiences on an emotional level.</p>
                         <p>Our approach combines technical expertise with creative vision, ensuring every project receives the attention and craftsmanship it deserves. From initial concept to final delivery, we work closely with our clients to bring their vision to life.</p>
-                        <a href="#contact" class="cta-button">Work With Us</a>
+                        <a href="#contact" class="cta-button">See Our Past Work</a>
                     </div>
                     <div class="about-image fade-in">
                         <img src="http://paulgray.co/wp-content/uploads/2025/03/Paul-Profile-Pic.png" alt="Video production professional at work" loading="lazy">
@@ -890,21 +867,19 @@
                     <div class="contact-info fade-in">
                         <h3>Get In Touch</h3>
                         <p>We'd love to hear about your project and discuss how we can help bring your vision to life.</p>
-                        <p><strong>Email:</strong> hello@ninefour.com</p>
-                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                        <p><strong>Response Time:</strong> Within 24 hours</p>
+                        <p><strong>Email:</strong> hello@ninefourfilms.com</p>
                     </div>
                     
                     <!-- Kit.com (ConvertKit) Form -->
                     <form class="contact-form fade-in" action="https://app.kit.com/forms/YOUR_FORM_ID" method="POST" data-kit-form="true">
                         <div class="form-group">
                             <label for="first_name">Name *</label>
-                            <input type="text" id="first_name" name="fields[first_name]" required aria-describedby="name-error">
+                            <input type="text" id="first_name" name="fields[first_name]" required placeholder="Enter your first name here">
                         </div>
                         
                         <div class="form-group">
                             <label for="email_address">Email *</label>
-                            <input type="email" id="email_address" name="email_address" required aria-describedby="email-error">
+                            <input type="email" id="email_address" name="email_address" required placeholder="Enter your email address here">
                         </div>
                         
                         <div class="form-group">
@@ -916,7 +891,7 @@
                         <input type="hidden" name="utf8" value="✓">
                         <input type="hidden" name="tags" value="website-contact">
                         
-                        <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+                        <button type="submit" class="form-button" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
             </div>
