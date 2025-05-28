@@ -3,771 +3,977 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ninefour. films - Authentic Storytelling Through Creative Lens</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="ninefour films specializes in producing meaningful documentaries and helping businesses with their video needs. Authentic storytelling through our creative lens.">
-    <meta name="keywords" content="documentary films, video production, business videos, authentic storytelling, creative videography">
-    <meta name="author" content="ninefour films">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ninefour. films - Authentic Storytelling">
-    <meta property="og:description" content="Producing meaningful docu-films and helping businesses with their video needs.">
+    <meta name="description" content="ninefour. - Professional video production services. Creating compelling visual stories that engage and inspire your audience.">
+    <meta name="keywords" content="video production, videography, commercial videos, corporate videos, content creation">
+    <meta name="author" content="ninefour.">
+    <meta property="og:title" content="ninefour. - Professional Video Production">
+    <meta property="og:description" content="Creating compelling visual stories that engage and inspire your audience.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ninefourfilms.com">
+    <meta property="og:url" content="https://ninefour.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>ninefour. - Professional Video Production Services</title>
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Google Fonts -->
+    <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ninefour.",
+        "description": "Professional video production services",
+        "url": "https://ninefour.com",
+        "logo": "https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+
     <style>
+        :root {
+            --text-primary: #2A2B2A;
+            --text-alt: #ffffff;
+            --background: #fcf6f5;
+            --accent: #C55043;
+            --hover: #C55043;
+            --font-heading: 'Rubik', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --shadow: 0 4px 20px rgba(42, 43, 42, 0.1);
+            --shadow-hover: 0 8px 30px rgba(42, 43, 42, 0.15);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-1: linear-gradient(135deg, #C55043 0%, #8B3A2A 100%);
+            --gradient-2: linear-gradient(135deg, #fcf6f5 0%, #f8f0ef 100%);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        :root {
-            --bg-color: #FCF6F5;
-            --accent-color: #2A2B2A;
-            --primary-color: #C55043;
-            --title-color: #C69A94;
-            --text-color: #2A2B2A;
-            --white: #ffffff;
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
-        
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--gradient-2);
+            line-height: 1.7;
             overflow-x: hidden;
-            font-weight: 300;
         }
-        
-        /* Header Styles */
-        .header {
+
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent);
+            color: var(--text-alt);
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Header - Fixed full-width container issue */
+        header {
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
+            width: 100vw;
             background: rgba(252, 246, 245, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(42, 43, 42, 0.1);
+            backdrop-filter: blur(20px) saturate(1.2);
             z-index: 1000;
-            padding: 1rem 2rem;
-            transition: all 0.3s ease;
+            padding: 1rem 0;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(42, 43, 42, 0.08);
         }
-        
-        .header-container {
+
+        .header-scrolled {
+            padding: 0.75rem 0;
+            box-shadow: 0 4px 32px rgba(42, 43, 42, 0.12);
+            background: rgba(252, 246, 245, 0.98);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            box-sizing: border-box;
         }
-        
-        .logo img {
+
+        .logo {
             height: 65px;
-            transition: transform 0.3s ease;
+            width: 150px;
+            object-fit: contain;
+            transition: var(--transition);
+            filter: drop-shadow(0 2px 4px rgba(42, 43, 42, 0.1));
         }
-        
-        .logo img:hover {
-            transform: scale(1.05);
-        }
-        
+
         .nav-menu {
             display: flex;
-            gap: 2rem;
             list-style: none;
+            gap: 2.5rem;
+            align-items: center;
         }
-        
-        .nav-menu a {
+
+        .nav-link {
             text-decoration: none;
-            color: var(--text-color);
-            font-weight: 400;
-            font-size: 18px;
-            transition: all 0.3s ease;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: var(--transition);
             position: relative;
+            font-size: 0.95rem;
         }
-        
-        .nav-menu a::after {
+
+        .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -6px;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
+            background: var(--gradient-1);
+            transition: var(--transition);
+            border-radius: 1px;
         }
-        
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
-        
-        .nav-menu a:hover::after {
+
+        .nav-link:hover::after,
+        .nav-link:focus::after {
             width: 100%;
         }
-        
-        /* Mobile Menu */
-        .mobile-menu-btn {
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #C55043 0%, #8B3A2A 100%);
+            color: #ffffff;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 16px rgba(197, 80, 67, 0.3);
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(197, 80, 67, 0.4);
+        }
+
+        /* Mobile menu */
+        .mobile-menu-toggle {
             display: none;
             background: none;
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--text-color);
+            color: var(--text-primary);
         }
-        
-        /* Main Content */
-        .main-content {
-            margin-top: 100px;
-            position: relative;
+
+        /* Hero Section - Full-screen with better spacing */
+        .hero {
             min-height: 100vh;
-        }
-        
-        .hero-background {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 65%;
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(42, 43, 42, 0.6), rgba(197, 80, 67, 0.4)), 
-                        url('http://paulgray.co/wp-content/uploads/2025/03/Paul-Profile-Pic.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            z-index: -1;
-        }
-        
-        .content-container {
-            display: grid;
-            grid-template-columns: 35% 65%;
-            gap: 0;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0;
+            display: flex;
             align-items: center;
-            min-height: 100vh;
-        }
-        
-        .left-content {
-            z-index: 2;
-            padding: 4rem 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            background: rgba(252, 246, 245, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        
-        .hero-tagline {
-            font-size: 18px;
-            font-weight: 300;
-            color: var(--text-color);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            opacity: 0.8;
-        }
-        
-        .brand-title {
-            margin-bottom: 3rem;
-        }
-        
-        .brand-title .line1 {
-            font-size: 64px;
-            font-weight: 900;
-            color: var(--title-color);
-            line-height: 0.9;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 0.5rem;
-        }
-        
-        .brand-title .line2 {
-            font-size: 18px;
-            color: var(--accent-color);
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-        
-        .subtitle {
-            font-size: 24px;
-            font-weight: 900;
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-            text-transform: capitalize;
-        }
-        
-        .focus-section {
-            margin-bottom: 3rem;
-            text-align: left;
-            max-width: 350px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .focus-heading {
-            font-size: 20px;
-            font-weight: 900;
-            color: var(--text-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        
-        .focus-list {
-            font-size: 16px;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-        
-        .focus-list a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 400;
-        }
-        
-        .focus-list a:hover {
-            text-decoration: underline;
-        }
-        
-        .signup-text {
-            font-size: 16px;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            text-align: center;
-        }
-        
-        /* Form Styles */
-        .signup-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            max-width: 350px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            position: relative;
-        }
-        
-        .form-input {
-            width: 100%;
-            padding: 1rem 0;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid rgba(42, 43, 42, 0.3);
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            color: var(--text-color);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-bottom-color: var(--primary-color);
-            border-bottom-width: 2px;
-        }
-        
-        .form-input::placeholder {
-            color: rgba(42, 43, 42, 0.5);
-            font-weight: 300;
-        }
-        
-        .signup-btn {
-            background: linear-gradient(135deg, var(--primary-color), #d4614f);
-            color: var(--white);
-            border: none;
-            padding: 1.2rem 2.5rem;
-            font-size: 16px;
-            font-weight: 700;
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            border-radius: 50px;
-            box-shadow: 0 8px 25px rgba(197, 80, 67, 0.3);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 0 2rem;
             position: relative;
             overflow: hidden;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
-        
-        .signup-btn::before {
+
+        .hero::before {
             content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .signup-btn:hover::before {
-            left: 100%;
-        }
-        
-        .signup-btn:hover {
-            background: linear-gradient(135deg, var(--accent-color), #1a1b1a);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(42, 43, 42, 0.4);
-        }
-        
-        .signup-btn:active {
-            transform: translateY(-1px);
-        }
-        
-        /* Right Content - Video */
-        .right-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            min-height: 100vh;
-            position: relative;
-        }
-        
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            border: 3px solid rgba(255,255,255,0.1);
-        }
-        
-        .video-container::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--primary-color), var(--title-color), var(--primary-color));
-            border-radius: 22px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .video-container:hover::before {
-            opacity: 1;
-        }
-        
-        .video-container:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-        }
-        
-        .video-container iframe {
-            width: 100%;
-            height: 350px;
-            border: none;
-        }
-        
-        /* Video Play Button Overlay */
-        .video-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            background: radial-gradient(ellipse at top right, rgba(197, 80, 67, 0.05) 0%, transparent 70%);
             pointer-events: none;
         }
-        
-        .video-container:hover .video-overlay {
-            opacity: 1;
-        }
-        
-        .play-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(255,255,255,0.9);
-            border-radius: 50%;
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: center;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
+            gap: 5rem;
+            width: 100%;
+            position: relative;
+            z-index: 1;
         }
-        
-        .video-container:hover .play-icon {
-            transform: scale(1);
+
+        .hero-content {
+            flex: 1;
+            animation: fadeInUp 1s ease-out;
         }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .content-container {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-            
-            .left-content {
-                text-align: center;
-                padding: 3rem 2rem;
-                min-height: 60vh;
-            }
-            
-            .brand-title .line1 {
-                font-size: 48px;
-            }
-            
-            .hero-background {
-                width: 100%;
-                height: 40vh;
-                background-attachment: scroll;
-                opacity: 0.3;
-            }
-            
-            .right-content {
-                min-height: 40vh;
-                background: linear-gradient(135deg, rgba(252, 246, 245, 0.95), rgba(198, 154, 148, 0.1));
-            }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.75rem;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
         }
-        
-        @media (max-width: 768px) {
-            .header {
-                padding: 1rem;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(252, 246, 245, 0.98);
-                backdrop-filter: blur(15px);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                border-radius: 0 0 15px 15px;
-            }
-            
-            .nav-menu.active {
-                display: flex;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .left-content {
-                padding: 2rem 1.5rem;
-            }
-            
-            .brand-title .line1 {
-                font-size: 36px;
-            }
-            
-            .hero-tagline {
-                font-size: 16px;
-            }
-            
-            .subtitle {
-                font-size: 20px;
-            }
-            
-            .video-container iframe {
-                height: 250px;
-            }
+
+        .hero-subtitle {
+            font-size: 1.375rem;
+            color: var(--text-primary);
+            margin-bottom: 2.5rem;
+            opacity: 0.85;
+            font-weight: 400;
+            line-height: 1.6;
         }
-        
-        @media (max-width: 480px) {
-            .brand-title .line1 {
-                font-size: 28px;
-            }
-            
-            .left-content {
-                padding: 1.5rem 1rem;
-            }
-            
-            .video-container iframe {
-                height: 200px;
-            }
-            
-            .signup-form {
-                max-width: 100%;
-            }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
         }
-        
-        /* Loading Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
+
+        .btn-secondary {
+            background: transparent;
+            color: #2A2B2A;
+            border: 2px solid #2A2B2A;
+            padding: 0.875rem 2rem;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
         }
-        
-        .fade-in:nth-child(1) { animation-delay: 0.1s; }
-        .fade-in:nth-child(2) { animation-delay: 0.3s; }
-        .fade-in:nth-child(3) { animation-delay: 0.5s; }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            background: #2A2B2A;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(42, 43, 42, 0.2);
         }
-        
-        /* Scroll Animations */
-        .scroll-animate {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        .hero-video {
+            flex: 1;
+            animation: fadeInRight 1s ease-out 0.3s both;
         }
-        
-        .scroll-animate.visible {
-            opacity: 1;
-            transform: translateY(0);
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(42, 43, 42, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
-        /* Floating Animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-10px) rotate(1deg); }
-            66% { transform: translateY(5px) rotate(-1deg); }
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        /* Gradient Text Animation */
-        .gradient-text {
-            background: linear-gradient(-45deg, var(--primary-color), var(--title-color), var(--primary-color), var(--accent-color));
-            background-size: 400% 400%;
-            animation: gradientShift 4s ease infinite;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Particle Effect */
-        .particles {
+
+        .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
+        }
+
+        /* Services Section - Enhanced with full-width images */
+        .services {
+            padding: 8rem 2rem;
+            background: var(--text-alt);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(42, 43, 42, 0.1), transparent);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.25rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            margin-bottom: 5rem;
+            opacity: 0.75;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: #fcf6f5;
+            border-radius: 16px;
             overflow: hidden;
+            box-shadow: 0 8px 32px rgba(42, 43, 42, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(42, 43, 42, 0.06);
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(42, 43, 42, 0.12);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #C55043 0%, #8B3A2A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .service-card p {
+            line-height: 1.7;
+            opacity: 0.85;
+        }
+
+        /* About Section - Enhanced */
+        .about {
+            padding: 8rem 2rem;
+            background: var(--gradient-2);
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(ellipse at bottom right, rgba(197, 80, 67, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            margin-bottom: 1.75rem;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 48px rgba(42, 43, 42, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Stats Section - Enhanced */
+        .stats {
+            padding: 5rem 2rem;
+            background: var(--text-primary);
+            color: var(--text-alt);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(197, 80, 67, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            text-align: center;
+            position: relative;
             z-index: 1;
         }
-        
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            opacity: 0.6;
-            animation: floatUp 8s infinite linear;
+
+        .stat-item h3 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
         }
-        
-        @keyframes floatUp {
-            0% {
+
+        .stat-item p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        /* Contact Section - Enhanced form */
+        .contact {
+            padding: 8rem 2rem;
+            background: var(--text-alt);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, #fcf6f5 0%, #f8f0ef 100%);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 16px 48px rgba(42, 43, 42, 0.1);
+            border: 1px solid rgba(42, 43, 42, 0.06);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(42, 43, 42, 0.1);
+            border-radius: 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #C55043;
+            box-shadow: 0 0 0 4px rgba(197, 80, 67, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            margin-bottom: 1.25rem;
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        /* Footer - Enhanced */
+        footer {
+            background: var(--text-primary);
+            color: var(--text-alt);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
                 opacity: 0;
-                transform: translateY(100vh) rotate(0deg);
+                transform: translateY(40px);
             }
-            10% {
-                opacity: 0.6;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
+        }
+
+        @keyframes fadeInRight {
+            from {
                 opacity: 0;
-                transform: translateY(-100px) rotate(360deg);
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(252, 246, 245, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(42, 43, 42, 0.15);
+                border-radius: 0 0 16px 16px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: 100vh;
+                padding: 8rem 1rem 4rem;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <img src="https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png" alt="ninefour films logo">
-            </div>
-            <nav>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="https://ninefourfilms.com/services/">Our Services</a></li>
-                    <li><a href="https://ninefourfilms.com/ourfilms/">Our Videos</a></li>
-                </ul>
-            </nav>
-        </div>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header id="header">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <img src="https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png" alt="ninefour. logo" class="logo">
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="cta-button">Get Quote</a></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+                ☰
+            </button>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="hero-background"></div>
-        
-        <div class="content-container">
-            <div class="left-content">
-                <div class="particles" id="particles"></div>
-                
-                <div class="hero-tagline fade-in">Telling Authentic Stories Through Our Creative Lens</div>
-                
-                <div class="brand-title fade-in">
-                    <div class="line1 gradient-text">ninefour.</div>
-                    <div class="line2">films</div>
+    <main id="main">
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Visual Stories That <span style="color: var(--accent);">Captivate</span></h1>
+                    <p class="hero-subtitle">Professional video production services that bring your vision to life. From concept to completion, we create compelling content that engages your audience.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="cta-button">Start Your Project</a>
+                        <a href="#services" class="btn-secondary">Our Services</a>
+                    </div>
                 </div>
-                
-                <div class="focus-section scroll-animate">
-                    <h3 class="focus-heading">WE FOCUS ON:</h3>
-                    <div class="focus-list">
-                        • producing meaningful docu-films (<a href="https://ninefourfilms.com/ourfilms/">see our work</a>)<br>
-                        • helping businesses with their video needs.
+                <div class="hero-video">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/ueyI28rIoUk?si=SW2Bt8-mGrN73DGL" 
+                            title="ninefour. Video Production Showcase"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
                     </div>
-                    <p class="signup-text">Sign up below if you're looking for help with your videography needs:</p>
                 </div>
-                
-                <form class="signup-form scroll-animate" id="signupForm">
-                    <div class="form-group">
-                        <input type="text" class="form-input" id="firstName" name="firstName" placeholder="Enter Your First Name Here" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" id="email" name="email" placeholder="Enter Your Email Address Here" required>
-                    </div>
-                    <button type="submit" class="signup-btn">Sign Up</button>
-                </form>
             </div>
-            
-            <div class="right-content">
-                <div class="video-container scroll-animate floating">
-                    <div class="video-overlay">
-                        <div class="play-icon">
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                                <path d="M8 5v14l11-7z" fill="#C55043"/>
-                            </svg>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title fade-in">Our Services</h2>
+                <p class="section-subtitle fade-in">Comprehensive video production solutions tailored to your needs</p>
+                
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-image">🎬</div>
+                        <div class="service-content">
+                            <h3>Commercial Production</h3>
+                            <p>High-impact commercial videos that drive results. From concept development to final delivery, we create compelling advertisements that resonate with your target audience.</p>
                         </div>
                     </div>
-                    <iframe 
-                        width="560" 
-                        height="350" 
-                        src="https://www.youtube.com/embed/ueyI28rIoUk?si=SW2Bt8-mGrN73DGL" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-image">🏢</div>
+                        <div class="service-content">
+                            <h3>Corporate Videos</h3>
+                            <p>Professional corporate content including company profiles, training videos, and internal communications that effectively convey your brand message.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-image">🎥</div>
+                        <div class="service-content">
+                            <h3>Event Coverage</h3>
+                            <p>Comprehensive event documentation and live streaming services. Capture every important moment with cinematic quality and professional editing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-image">✂️</div>
+                        <div class="service-content">
+                            <h3>Post-Production</h3>
+                            <p>Expert editing, color grading, sound design, and motion graphics. Transform raw footage into polished, professional content that exceeds expectations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-image">📱</div>
+                        <div class="service-content">
+                            <h3>Social Media Content</h3>
+                            <p>Engaging short-form content optimized for social platforms. Increase your online presence with videos designed for maximum engagement and shareability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-image">🎭</div>
+                        <div class="service-content">
+                            <h3>Creative Consulting</h3>
+                            <p>Strategic creative direction and storytelling expertise. We help develop concepts that align with your brand and effectively communicate your message.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item fade-in">
+                        <h3>150+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <h3>50+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <h3>24/7</h3>
+                        <p>Support Available</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h2>Crafting Stories That Matter</h2>
+                        <p>At ninefour., we believe every brand has a unique story worth telling. With over five years of experience in video production, we specialize in creating visual narratives that connect with audiences on an emotional level.</p>
+                        <p>Our approach combines technical expertise with creative vision, ensuring every project receives the attention and craftsmanship it deserves. From initial concept to final delivery, we work closely with our clients to bring their vision to life.</p>
+                        <a href="#contact" class="cta-button">Work With Us</a>
+                    </div>
+                    <div class="about-image fade-in">
+                        <img src="http://paulgray.co/wp-content/uploads/2025/03/Paul-Profile-Pic.png" alt="Video production professional at work" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title fade-in">Let's Create Something Amazing</h2>
+                <p class="section-subtitle fade-in">Ready to bring your vision to life? Get in touch and let's discuss your project.</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info fade-in">
+                        <h3>Get In Touch</h3>
+                        <p>We'd love to hear about your project and discuss how we can help bring your vision to life.</p>
+                        <p><strong>Email:</strong> hello@ninefour.com</p>
+                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                        <p><strong>Response Time:</strong> Within 24 hours</p>
+                    </div>
+                    
+                    <!-- Kit.com (ConvertKit) Form -->
+                    <form class="contact-form fade-in" action="https://app.kit.com/forms/YOUR_FORM_ID" method="POST" data-kit-form="true">
+                        <div class="form-group">
+                            <label for="first_name">Name *</label>
+                            <input type="text" id="first_name" name="fields[first_name]" required aria-describedby="name-error">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email_address">Email *</label>
+                            <input type="email" id="email_address" name="email_address" required aria-describedby="email-error">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="fields[message]" required placeholder="Tell us about your project, timeline, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <!-- Kit.com required hidden fields -->
+                        <input type="hidden" name="utf8" value="✓">
+                        <input type="hidden" name="tags" value="website-contact">
+                        
+                        <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script>
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
-        }
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 ninefour. All rights reserved. | Professional Video Production Services</p>
+        </div>
+    </footer>
 
-        // Form Submission
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const firstName = document.getElementById('firstName').value;
-            const email = document.getElementById('email').value;
-            
-            if (firstName && email) {
-                // Construct the URL with parameters
-                const baseUrl = 'https://paulgray.kit.com/471bef30b6/thanks';
-                const params = new URLSearchParams({
-                    'first_name': firstName,
-                    'email': email
-                });
-                
-                // Redirect to thank you page with parameters
-                window.location.href = `${baseUrl}?${params.toString()}`;
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
             }
         });
 
-        // Scroll Animations
-        function handleScrollAnimations() {
-            const elements = document.querySelectorAll('.scroll-animate');
-            const windowHeight = window.innerHeight;
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking on links
+        navMenu.addEventListener('click', (e) => {
+            if (e.target.classList.contains('nav-link')) {
+                navMenu.classList.remove('active');
+                mobileToggle.textContent = '☰';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
             });
-        }
+        }, observerOptions);
 
-        // Header Scroll Effect
-        function handleHeaderScroll() {
-            const header = document.querySelector('.header');
-            const scrollY = window.scrollY;
-            
-            if (scrollY > 50) {
-                header.style.background = 'rgba(252, 246, 245, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.background = 'rgba(252, 246, 245, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        }
-
-        // Event Listeners
-        window.addEventListener('scroll', () => {
-            handleScrollAnimations();
-            handleHeaderScroll();
-        });
-
-        window.addEventListener('load', () => {
-            handleScrollAnimations();
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            const navMenu = document.getElementById('navMenu');
-            const mobileBtn = document.querySelector('.mobile-menu-btn');
-            
-            if (!navMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
-                navMenu.classList.remove('active');
-            }
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
         });
 
         // Smooth scrolling for anchor links
@@ -776,23 +982,104 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const offsetTop = target.offsetTop - 80; // Account for fixed header
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Preload critical images
-        const preloadImages = [
-            'http://paulgray.co/wp-content/uploads/2025/03/Paul-Profile-Pic.png',
-            'https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png'
-        ];
+        // Stats counter animation
+        const animateStats = () => {
+            const statNumbers = document.querySelectorAll('.stat-item h3');
+            
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    
+                    if (stat.textContent.includes('+')) {
+                        stat.textContent = Math.floor(current) + '+';
+                    } else if (stat.textContent.includes('/')) {
+                        stat.textContent = Math.floor(current) + '/7';
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                }, 20);
+            });
+        };
 
-        preloadImages.forEach(src => {
-            const img = new Image();
-            img.src = src;
+        // Trigger stats animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Performance: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Accessibility: Focus management for mobile menu
+        mobileToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                mobileToggle.click();
+            }
+        });
+
+        // Preload critical resources
+        const preloadLink = document.createElement('link');
+        preloadLink.rel = 'preload';
+        preloadLink.as = 'image';
+        preloadLink.href = 'https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png';
+        document.head.appendChild(preloadLink);
+
+        // Kit.com form enhancement
+        document.querySelector('[data-kit-form]').addEventListener('submit', function(e) {
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+            
+            // Reset button after 3 seconds (Kit.com will handle the actual submission)
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }, 3000);
         });
     </script>
 </body>
