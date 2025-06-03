@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of ninefour. - Professional video production services. See our past projects and visual stories.">
+    <meta name="keywords" content="video portfolio, video production examples, ninefour projects, videography showcase">
+    <meta name="author" content="ninefour.">
+    <meta property="og:title" content="Our Work - ninefour.">
+    <meta property="og:description" content="Explore the portfolio of video projects by ninefour.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ninefourfilms.com/our-work.html"> <meta name="twitter:card" content="summary_large_image">
+    <title>Our Work - ninefour.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"> <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ninefour.",
+        "description": "Professional video production services",
+        "url": "https://ninefourfilms.com", // Update if domain changes
+        "logo": "https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service"
+        }
+    }
+    </script>
+
+    <style>
+        :root {
+            --text-primary: #2A2B2A;
+            --text-alt: #ffffff;
+            --background: #fcf6f5;
+            --accent: #C55043;
+            --hover: #C55043;
+            --font-heading: 'Rubik', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --shadow: 0 4px 20px rgba(42, 43, 42, 0.1);
+            --shadow-hover: 0 8px 30px rgba(42, 43, 42, 0.15);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-1: linear-gradient(135deg, #C55043 0%, #8B3A2A 100%);
+            --gradient-2: linear-gradient(135deg, #fcf6f5 0%, #f8f0ef 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--gradient-2);
+            line-height: 1.7;
+            overflow-x: hidden;
+            padding-top: 100px; /* Adjust if header height changes */
+        }
+
+        /* Skip to main content for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent);
+            color: var(--text-alt);
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; 
+            background: rgba(252, 246, 245, 0.95);
+            backdrop-filter: blur(20px) saturate(1.2);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(42, 43, 42, 0.08);
+        }
+
+        .header-scrolled {
+            padding: 0.75rem 0;
+            box-shadow: 0 4px 32px rgba(42, 43, 42, 0.12);
+            background: rgba(252, 246, 245, 0.98);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 10px auto; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            width: 100%; 
+            box-sizing: border-box; 
+        }
+
+        .logo {
+            height: 65px;
+            width: 150px; 
+            margin-top: -20px; 
+            object-fit: contain;
+            transition: var(--transition);
+            filter: drop-shadow(0 2px 4px rgba(42, 43, 42, 0.1));
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: var(--transition);
+            border-radius: 1px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link:focus::after,
+        .nav-link.active::after { 
+            width: 100%;
+        }
+        
+        .nav-link.active {
+            color: var(--accent); 
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #C55043 0%, #8B3A2A 100%);
+            color: #ffffff;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 16px rgba(197, 80, 67, 0.3);
+        }
+
+        .cta-button:hover,
+        .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(197, 80, 67, 0.4);
+            color: #ffffff;
+        }
+
+        /* Mobile menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+
+        /* General Container for sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem; 
+        }
+        
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 4rem 0; 
+            background: var(--text-alt); 
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.25rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            margin-bottom: 4rem; 
+            opacity: 0.75;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem; 
+        }
+
+        .portfolio-item {
+            background: #fcf6f5; 
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(42, 43, 42, 0.06);
+            display: flex; /* Added for flex layout */
+            flex-direction: column; /* Stack video and content vertically */
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .video-container { 
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; 
+            background-color: #000; 
+            flex-shrink: 0; /* Prevent video container from shrinking */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .portfolio-item-content {
+            padding: 1.5rem; 
+            flex-grow: 1; /* Allow content to take remaining space */
+            display: flex; /* For vertical centering if needed, or just structure */
+            flex-direction: column;
+        }
+
+        .portfolio-item h3 {
+            font-family: var(--font-heading);
+            font-size: 1.375rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .portfolio-item p {
+            line-height: 1.6;
+            opacity: 0.85;
+            font-size: 0.95rem;
+            flex-grow: 1; /* Allow paragraph to expand if title is short */
+        }
+
+
+        /* Footer */
+        footer {
+            background: #2A2B2A;
+            color: #ffffff;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 80px; 
+            }
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%; 
+                left: 0;
+                width: 100%;
+                background: rgba(252, 246, 245, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(42, 43, 42, 0.15);
+                border-radius: 0 0 16px 16px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-container {
+                padding: 0 1rem; 
+            }
+
+            .portfolio-section {
+                padding: 3rem 0;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr; 
+                gap: 2rem;
+            }
+            .section-title {
+                font-size: clamp(2rem, 5vw, 2.5rem);
+            }
+            .section-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+             .section-subtitle {
+                font-size: 1rem;
+            }
+            .portfolio-item-content {
+                padding: 1rem;
+            }
+            .portfolio-item h3 {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header id="header">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="index.html" aria-label="Homepage">
+                <img src="https://paulgray.co/wp-content/uploads/2025/03/ninefour.-trans-1024x247.png" alt="ninefour. logo" class="logo">
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="our-work.html" class="nav-link active">Our Work</a></li> 
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html#contact" class="cta-button">Work With Us</a></li>
+            </ul>
+            
+            <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="portfolio-section">
+            <div class="container">
+                <h1 class="section-title fade-in">Our Work</h1>
+                <p class="section-subtitle fade-in">Take a look at some of the compelling visual stories we've crafted for our clients.</p>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-in">
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/playlist?list=PLRN9EwUKsznEwan_Nwd5p8J5WPsRzj6aN" 
+                                title="Digital App Campaign - Famous Malaysian Cuisine - Playlist"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Digital App Campaign - Famous Malaysian Cuisine</h3>
+                            <p>A Video series for Tourism Malaysia (HQ). A 50 video campaign originally shot as accompanying videos for a digital guide app. These 3-5 Minute videos showcase 50 of the most recommended dishes in Malaysia, as well as the story of the Hawkers behind them.</p>
+                        </div>
+                    </div>
+                   
+                    <div class="portfolio-item fade-in">
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/BvRdRteu8YU" 
+                                title="Event Highlights Reel - Malaysian Heritage Cuisine"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Event Highlights Reel - Malaysian Heritage Cuisine</h3>
+                            <p>A Live Video & Social Media campaign for MAFS (Agriculture Ministry - Malaysia). The highlight reel showcases the event, which was hosted across 5 Countries and shown to viewers around the world on various digital platforms.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item fade-in">
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/playlist?list=PLRN9EwUKsznFnOLT7IIo069MVU4CFjaF9" 
+                                title="Web Series Showcase - Street Food Journeys - Playlist"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Web Series Showcase - Street Food Journeys</h3>
+                            <p>A web series for Tourism Malaysia (Australia). Originally launched during the pandemic, the series grew from being shot on phones & webcams to an 8 episode back-to-back series shot in Malaysia, receiving praise from viewers & stakeholders.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item fade-in">
+                        <div class="video-container">
+                            <iframe 
+                                src="https://fast.wistia.net/embed/iframe/pwfdfpoutv" 
+                                title="Narrative Documentary - Martin Yan: A Chef's Journey"
+                                allow="autoplay; fullscreen"
+                                allowtransparency="true" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                class="wistia_embed" 
+                                name="wistia_embed" 
+                                msallowfullscreen 
+                                width="100%" 
+                                height="100%"
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="portfolio-item-content">
+                            <h3>Narrative Documentary - Martin Yan: A Chef's Journey</h3>
+                            <p>Documentary shot for Martin Yan’s Asian Culinary Tour of Sydney in October 2023. A 30-minute documentary showcasing various asian cultural hotspots around sydney, interviews with culinary experts and cooking demonstrations. The documentary captured the narrative of the immigrant story in Australia through the perspective of food.</p>
+                        </div>
+                    </div>
+                     </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 ninefour. All rights reserved. | Professional Video Production Services</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) { 
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            const isActive = navMenu.classList.toggle('active');
+            mobileToggle.textContent = isActive ? '✕' : '☰';
+            mobileToggle.setAttribute('aria-expanded', isActive);
+        });
+
+        // Close mobile menu when clicking on links 
+        navMenu.addEventListener('click', (e) => {
+            if (e.target.classList.contains('nav-link') || e.target.classList.contains('cta-button')) {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileToggle.textContent = '☰';
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Accessibility: Focus management for mobile menu
+        mobileToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                mobileToggle.click();
+            }
+        });
+
+    </script>
+</body>
+</html>
